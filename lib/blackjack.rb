@@ -47,9 +47,26 @@ def initial_round
   sum
 end
 
-def hit?
+def hit?(current_total)
   # code hit? here
+
+  # get the user's answer
+  ans = get_user_input()
+
+  case ans
+  when "s"
+    prompt_user()
+  when "h"
+    puts "Comin' right up!"
+    current_total += deal_card()
+  else
+    invalid_command()
+    prompt_user()
+  end
+
+  current_total
 end
+
 
 def invalid_command
   # code invalid_command here
