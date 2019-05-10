@@ -22,6 +22,9 @@ end
 
 def get_user_input
   # code #get_user_input here
+  # find the user's answer
+  answer = gets.chomp
+  answer
 end
 
 def end_game
