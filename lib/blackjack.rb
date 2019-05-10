@@ -34,6 +34,17 @@ end
 
 def initial_round
   # code #initial_round here
+  # Initialize sum
+  sum = 0
+  # call Deal Card method, twice
+  2.times do
+    sum += deal_card()
+  end
+  
+  # display sum
+  display_card_total(sum)
+  # print sum
+  sum
 end
 
 def hit?
