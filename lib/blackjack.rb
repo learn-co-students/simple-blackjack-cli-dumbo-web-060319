@@ -47,29 +47,24 @@ def initial_round
   sum
 end
 
+
 def hit?(current_total)
-  # code hit? here
-
-  # get the user's answer
+  prompt_user
   ans = get_user_input()
-
-  case ans
-  when "s"
-    prompt_user()
-  when "h"
-    puts "Comin' right up!"
+  if ans == 'h'
     current_total += deal_card()
+  elsif ans == 's'
+    current_total
   else
-    invalid_command()
-    prompt_user()
+    invalid_command
   end
-
-  current_total
 end
 
 
 def invalid_command
   # code invalid_command here
+  "Please enter a valid command"
+  prompt_user()
 end
 
 #####################################################
@@ -78,5 +73,14 @@ end
 
 def runner
   # code runner here
+  welcome()
+  sum = initial_round()
+  until sum > 21 do
+    ans = hit?(sum)
+    sum = 0
+    sum += ans
+    display_card_total(sum)
+  end
+  end_game(sum)
 end
-    
+
