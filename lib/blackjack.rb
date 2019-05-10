@@ -5,6 +5,8 @@ end
 
 def deal_card
   # code #deal_card here
+  #  Random number bewtween 1 and 11
+  rand(1..11)
 end
 
 def display_card_total
