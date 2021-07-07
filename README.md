@@ -5,7 +5,7 @@
 - Utilize conditional logic and looping
 - Gain an introduction to the command line interface
 
-## Background
+## Background   
 
 In [Blackjack](http://en.wikipedia.org/wiki/Blackjack), the goal is to have a
 hand that is closer to 21 than the dealer's hand without ever exceeding a card
